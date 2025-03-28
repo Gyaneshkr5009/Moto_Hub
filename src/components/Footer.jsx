@@ -60,7 +60,7 @@ const Footer = () => {
 
             <li>
                 <a
-                href="#"
+                href="https://www.instagram.com/revnation.future/"
                 rel="noreferrer"
                 target="_blank"
                 class="text-gray-700 transition hover:text-gray-700/75"
@@ -78,7 +78,7 @@ const Footer = () => {
 
             <li>
                 <a
-                href="#"
+                href="https://x.com/GyaneshKum41451"
                 rel="noreferrer"
                 target="_blank"
                 class="text-gray-700 transition hover:text-gray-700/75"
@@ -94,7 +94,7 @@ const Footer = () => {
 
             <li>
                 <a
-                href="#"
+                href="https://github.com/Gyaneshkr5009/Moto_Hub"
                 rel="noreferrer"
                 target="_blank"
                 class="text-gray-700 transition hover:text-gray-700/75"

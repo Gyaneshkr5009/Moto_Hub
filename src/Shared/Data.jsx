@@ -109,7 +109,7 @@ const Category=[
     {
         id:9,
         name:'Sports Car',
-        icon:'../../public/super-car.png'
+        icon:'public/super-car.png'
     },
     
 ]
