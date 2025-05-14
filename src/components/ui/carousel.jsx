@@ -141,54 +141,55 @@ function CarouselItem({
   );
 }
 
-function CarouselPrevious({
-  className,
-  variant = "outline",
-  size = "icon",
-  ...props
-}) {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+function CarouselPrevious({ className, variant = "ghost", size = "icon", ...props }) {
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
 
   return (
-    (<Button
+    <Button
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn("absolute size-8 rounded-full", orientation === "horizontal"
-        ? "top-1/2 -left-12 -translate-y-1/2"
-        : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)}
+      className={cn(
+        "absolute size-10 bg-white/70 dark:bg-black/50 rounded-full shadow-lg transition-opacity",
+        "hover:bg-white hover:dark:bg-black",
+        canScrollPrev ? "opacity-100" : "opacity-50 cursor-not-allowed",
+        orientation === "horizontal" ? "top-1/2 -left-6 -translate-y-1/2" : "-top-6 left-1/2 -translate-x-1/2 rotate-90",
+        className
+      )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
-      {...props}>
-      <ArrowLeft />
+      {...props}
+    >
+      <ArrowLeft size={24} />
       <span className="sr-only">Previous slide</span>
-    </Button>)
+    </Button>
   );
 }
 
-function CarouselNext({
-  className,
-  variant = "outline",
-  size = "icon",
-  ...props
-}) {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+function CarouselNext({ className, variant = "ghost", size = "icon", ...props }) {
+  const { orientation, scrollNext, canScrollNext } = useCarousel();
 
   return (
-    (<Button
+    <Button
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn("absolute size-8 rounded-full", orientation === "horizontal"
-        ? "top-1/2 -right-12 -translate-y-1/2"
-        : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)}
+      className={cn(
+        "absolute size-10 bg-white/70 dark:bg-black/50 rounded-full shadow-lg transition-opacity",
+        "hover:bg-white hover:dark:bg-black",
+        canScrollNext ? "opacity-100" : "opacity-50 cursor-not-allowed",
+        orientation === "horizontal" ? "top-1/2 -right-6 -translate-y-1/2" : "-bottom-6 left-1/2 -translate-x-1/2 rotate-90",
+        className
+      )}
       disabled={!canScrollNext}
       onClick={scrollNext}
-      {...props}>
-      <ArrowRight />
+      {...props}
+    >
+      <ArrowRight size={24} />
       <span className="sr-only">Next slide</span>
-    </Button>)
+    </Button>
   );
 }
+
 
 export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };

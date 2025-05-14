@@ -12,37 +12,63 @@ import { Toaster } from './components/ui/sonner'
 import SearchByCategory from './search/[category]'
 import SearchByOptions from './search'
 import ListingDetails from './listing-details/[id]'
+import {About,
+    Careers,
+    History,
+    Services,
+    Projects
+  } from './Pages/index.jsx'
 
-const router=createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path:'/',
-    element:<Home/>
+    path: '/',
+    element: <Home />,
   },
   {
-    path:'/contact',
-    element:<Contact/>
+    path: '/contact',
+    element: <Contact />,
   },
   {
-    path:'/profile',
-    element:<Profile/>
+    path: '/profile',
+    element: <Profile />,
   },
   {
-    path:'/add-listing',
-    element:<AddListing/>
+    path: '/add-listing',
+    element: <AddListing />,
   },
   {
-    path:'/search/:category',
-    element:<SearchByCategory/>
+    path: '/search/:category',
+    element: <SearchByCategory />,
   },
   {
-    path:'/search',
-    element:<SearchByOptions/>
+    path: '/search',
+    element: <SearchByOptions />,
   },
   {
-    path:'/listing-details/:id',
-    element:<ListingDetails/>
+    path: '/listing-details/:id',
+    element: <ListingDetails />,
+  },
+  {
+    path: '/about',
+    element: <About />,
+  },
+  {
+    path: '/careers',
+    element: <Careers />,
+  },
+  {
+    path: '/history',
+    element: <History />,
+  },
+  {
+    path: '/services',
+    element: <Services />,
+  },
+  {
+    path: '/projects',
+    element: <Projects />,
   }
-])
+]);
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 

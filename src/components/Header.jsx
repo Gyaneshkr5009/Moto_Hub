@@ -22,10 +22,26 @@ const Header = () => {
                 <img src="/logo.svg" width={150} height={100} alt="Logo" />
             </Link>
             <ul className='md:flex gap-16 hidden'>
-                <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>Home</li>
-                <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>Search</li>
-                <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>New</li>
-                <li className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>Preowned</li>
+                <li>
+                    <Link to='/' className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/search' className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>
+                        Search
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/search?cars=New&make=BMW' className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>
+                        New
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/' className='font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary'>
+                        Preowned
+                    </Link>
+                </li>
             </ul>
             <div className='flex gap-5 items-center'>
                 {isSignedIn && <UserButton />}
