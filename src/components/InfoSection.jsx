@@ -9,14 +9,14 @@ const InfoSection = () => {
           {/* Left Side - Text Section */}
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
-              Discover the Future of Motorcycling
+              Discover Your Perfect Ride
             </h2>
 
             <p className="text-lg text-gray-700">
-              At Moto Hub, we are redefining the motorcycling experience by connecting enthusiasts, sharing expert reviews, and providing in-depth insights into the latest trends and technologies. Join us as we explore the world of two-wheelers with a community-driven approach.
+              At Moto Hub, we bring you a marketplace for cars, bikes, trucks, and more. Whether you're buying, selling, or exploring the latest models, our platform connects enthusiasts with the best deals, expert reviews, and in-depth insights. Join our community and find your perfect ride today!
             </p>
           </div>
-    
+
           {/* Right Side - Image Section */}
           <div className="flex justify-center">
             <img
